@@ -1,0 +1,806 @@
+Index: src/test/java/pages/Hasta_Kayit_Page_E.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package pages;\r\n\r\n\r\nimport org.openqa.selenium.WebElement;\r\nimport org.openqa.selenium.support.FindBy;\r\nimport org.openqa.selenium.support.PageFactory;\r\nimport utilities.Driver;\r\n\r\npublic class Hasta_Kayit_Page_E {\r\n\r\n    public Hasta_Kayit_Page_E(){\r\n        PageFactory.initElements(Driver.getDriver(),this);\r\n    }\r\n\r\n    @FindBy(xpath = \"(//input[@class='inpt wpx50'])[3]\")\r\n    public WebElement kurum;\r\n\r\n    @FindBy(xpath = \"(//input[@class='inpt wpx50'])[4]\")\r\n    public WebElement kurumDetay;\r\n\r\n    @FindBy(id = \"PopupSaveButton_0\")\r\n    public  WebElement kaydetButton;\r\n    @FindBy(xpath = \"(//p)[1]\")\r\n    public WebElement HataMassage;\r\n\r\n    //----------------------------- Merve\r\n    @FindBy(id=\"CHK_HASTA_KAYIT_YENIDOGAN\")\r\n    public WebElement yenidoganCheckBox;\r\n\r\n    @FindBy(id=\"TXT_HASTA_KAYIT_DOGUM_SIRASI\")\r\n    public WebElement dogumSirasiSearchBox;\r\n\r\n    @FindBy(id=\"CHK_HASTA_KAYIT_MAVIKART\")\r\n    public WebElement maviKartCheckBox;\r\n\r\n    @FindBy(id=\"TXT_HASTA_KAYIT_TC_KIMLIK_NO\")\r\n    public WebElement TCsearchBox;\r\n\r\n    @FindBy(id=\"TXT_HASTA_KAYIT_DOGUM_TARIHI\")\r\n    public WebElement dogumTarihiSearchBox;\r\n\r\n    @FindBy(xpath = \"//a[@onclick='HastaKayitTCKimlikAktar()']\")\r\n    public WebElement TCaktarButton;\r\n\r\n    @FindBy(xpath = \"//a[@onclick='HastaKayitTCKimlikDogrula()']\")\r\n    public WebElement TCDogrulaButton;\r\n\r\n    @FindBy(xpath = \"//*[@id=\\\"dlgKurumArama\\\"]/div[2]/div[1]/a/span\")\r\n    public WebElement dogrulaKapatButton;\r\n\r\n    @FindBy(id=\"TXT_HASTA_KAYIT_SOYADI\")\r\n    public WebElement soyadiSearchBox;\r\n\r\n    @FindBy(id=\"TXT_HASTA_KAYIT_ADI\")\r\n    public WebElement adiSearchBox;\r\n\r\n    @FindBy(id=\"CMB_HASTA_KAYIT_YAKINLIK\")\r\n    public WebElement yakinligiDropdown;\r\n\r\n    @FindBy(id=\"TXT_HASTA_KAYIT_KART_SAHIBI\")\r\n    public WebElement kartSahibiSearchBox;\r\n\r\n    @FindBy(id=\"CMB_HASTA_KAYIT_CINSIYET\")\r\n    public  WebElement cinsiyetDropdown;\r\n\r\n    @FindBy(id=\"TXT_HASTA_KAYIT_MEDENI_HAL\")\r\n    public WebElement medeniHaliSearchBox;\r\n\r\n    @FindBy(xpath = \"//input[@id='TXT_HASTA_KAYIT_TAHSIS_NO']\")\r\n    public WebElement pasaportIdSearchBox;\r\n\r\n    @FindBy(xpath = \"//input[@id='TXT_HASTA_KAYIT_KARNE_SERI']\")\r\n    public WebElement pasaportNoSearchBox1;\r\n\r\n    @FindBy(xpath = \"//input[@id='TXT_HASTA_KAYIT_KARNE_NO']\")\r\n    public WebElement pasaportNoSearchBox2;\r\n\r\n//------------------------------- İlyas\r\n    @FindBy(xpath = \"//*[@id=\\\"TXT_HASTA_KAYIT_TEL\\\"]\")\r\n    public WebElement telefonnumarasi;\r\n\r\n    @FindBy(xpath = \"//*[@id=\\\"TXT_HASTA_KAYIT_CEP_TEL\\\"]\")\r\n    public WebElement ceptelefonu;\r\n\r\n    @FindBy(xpath = \"//*[@id=\\\"TXT_HASTA_KAYIT_EMAIL\\\"]\")\r\n    public WebElement email;\r\n\r\n    @FindBy(xpath = \"//*[@id=\\\"TXT_HASTA_KAYIT_MESLEK_KODU\\\"]\")\r\n    public WebElement meslek;\r\n\r\n    @FindBy(xpath = \"//*[@id=\\\"CMB_HASTA_KAYIT_STATUS\\\"]\")\r\n    public WebElement statu;\r\n\r\n    @FindBy(xpath = \"//*[@id=\\\"CMB_HASTA_KAYIT_OGRENIM\\\"]\")\r\n    public WebElement ogrenim;\r\n\r\n    @FindBy(xpath = \"//*[@id=\\\"CMB_HASTA_KAYIT_KAN_GRUBU\\\"]\")\r\n    public WebElement kangrubu;\r\n\r\n    @FindBy(xpath = \"//*[@id='CHK_HASTA_KAYIT_SMS_GONDERILEBILIR']\")\r\n    public WebElement SMS;\r\n\r\n    @FindBy(id = \"CHK_HASTA_KAYIT_EMAIL_GONDERILEBILIR\")\r\n    public WebElement EMAIL;\r\n\r\n    @FindBy(xpath = \"//*[@id='CHK_HASTA_KAYIT_KIMLIK_FOTOKOPISI']\")\r\n    public WebElement kimlikfotokopi;\r\n\r\n    @FindBy(xpath = \"//*[@id='CHK_HASTA_KAYIT_KVKK_ONAM']\")\r\n    public WebElement KVKK;\r\n\r\n    //----------------------------------------------------- Fatih\r\n\r\n\r\n    @FindBy(xpath = \"//input[@class='inpt wpx270']\")\r\n    public WebElement adresSearchBox;\r\n\r\n    @FindBy(xpath = \"//input[@class='inpt wpx265']\")\r\n    public WebElement adresSearchBox2;\r\n\r\n    @FindBy(xpath = \"(//input[@class='inpt wpx50'])[9]\")\r\n    public WebElement ilSearchBox;\r\n\r\n    @FindBy(xpath = \"(//input[@class='inpt wpx50'])[10]\")\r\n    public  WebElement ilceSearchBox;\r\n\r\n    @FindBy(xpath = \"(//input[@class='inpt wpx50'])[11]\")\r\n    public  WebElement mahalleSearchBox;\r\n\r\n    @FindBy(xpath = \"(//input[@class='inpt wpx50'])[10]\")\r\n    public  WebElement koySearchBox;\r\n\r\n    @FindBy(xpath = \"//input[@class='inpt wpx160']\")\r\n    public  WebElement caddeSkSearchBox;\r\n\r\n    @FindBy(xpath = \"//input[@class='inpt wpx70']\")\r\n    public  WebElement postaKoduSearchBox;\r\n\r\n    @FindBy(xpath = \"(//a[@class='hastaButton backWhite'])[6]\")\r\n    public  WebElement adresAktarButton;\r\n\r\n    @FindBy(xpath = \"(//a[@class='hastaButton backWhite'])[7]\")\r\n    public  WebElement beyanAdresButton;\r\n\r\n    @FindBy(xpath = \"//textarea[@class='inpt wpx355']\")\r\n    public WebElement aciklamaSearchBox;\r\n\r\n //--------------------------------------------------------- Baris\r\n\r\n    @FindBy(xpath = \"(//select[@class='inpt '])[1]\")\r\n    public  WebElement uyruguDropdown;\r\n\r\n    @FindBy(xpath = \"(//select[@class='inpt '])[2]\")\r\n    public  WebElement basvuruSekliDropdown;\r\n\r\n    @FindBy(xpath = \"(//input[@class='inpt '])[13]\")\r\n    public  WebElement babaAdiSearchBox;\r\n\r\n    @FindBy(xpath = \"(//input[@class='inpt '])[14]\")\r\n    public  WebElement anaAdiSearchBox;\r\n\r\n    @FindBy(xpath = \"(//input[@class='inpt '])[15]\")\r\n    public  WebElement dogumYeriSearchBox;\r\n\r\n    @FindBy(id = \"TXT_HASTA_KAYIT_ANNE_TC_KIMLIK_NO\")\r\n    public  WebElement anneTCNoSearchBox;\r\n\r\n    @FindBy(xpath = \"(//a[@class='hastaButton backWhite'])[5]\")\r\n    public  WebElement dogrulaF1Button;\r\n\r\n    @FindBy(xpath = \"//input[@id='TXT_HASTA_KAYIT_ANNE_DOGUM_TARIHI']\")\r\n    public WebElement anneDogumTarihiSearchBox;\r\n\r\n    @FindBy(xpath = \"(//a[@class='hem_border hem_button hem_sil hem_left lookupClearButton backWhite'])\")\r\n    public  WebElement hastaTuruSilmeButton;\r\n\r\n    @FindBy(xpath = \"(//input[@class='inpt  lookupOpenButton'])[3]\")\r\n    public  WebElement hastaTuruButton;\r\n\r\n\r\n\r\n\r\n\r\n\r\n    \r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/pages/Hasta_Kayit_Page_E.java b/src/test/java/pages/Hasta_Kayit_Page_E.java
+--- a/src/test/java/pages/Hasta_Kayit_Page_E.java	(revision 8654b663b7d880c7a2c1e3c8afdcdb07fba7f4e8)
++++ b/src/test/java/pages/Hasta_Kayit_Page_E.java	(date 1692113336295)
+@@ -23,6 +23,37 @@
+     @FindBy(xpath = "(//p)[1]")
+     public WebElement HataMassage;
+ 
++    @FindBy ( xpath = "(//a[@class='LookupSelectButton text_btn text_btn_ok backWhite'])[7]")
++    public WebElement saglikTurizimiButton;
++
++    @FindBy (xpath = "//input[@id='TXT_HASTA_KAYIT_BEBEK_DOGUM_HAFTA']")
++    public WebElement bebeginDogumHaftasiSearchBox;
++
++    @FindBy (xpath = "//input[@id='TXT_HASTA_KAYIT_BEBEK_DOGUM_HAFTA_GUN']")
++    public WebElement bebeginDogumGunuSearchBox;
++
++    @FindBy (xpath = "(//p)")
++    public WebElement islemBasariliMassage;
++
++    @FindBy(id = "TXT_HASTA_KAYIT_TAHSIS_NO")
++    public WebElement tahsisNoSearchBox;
++
++    @FindBy(id = "TXT_HASTA_KAYIT_KARNE_SERI")
++    public WebElement karneSeriNoSearchBox1;
++
++    @FindBy(id = "TXT_HASTA_KAYIT_KARNE_NO")
++    public WebElement karneSeriNoSearchBox2;
++
++    @FindBy(xpath = "(//a[@class='LookupSelectButton text_btn text_btn_ok backWhite'])[5]")
++    public WebElement kimliksizHastaButton;
++
++    @FindBy(xpath = "(//P)")
++    public WebElement massage;
++
++    @FindBy(xpath = "//input[@id='TC_KIMLIK_NO']")
++    public WebElement TccSearchBox;
++
++
+     //----------------------------- Merve
+     @FindBy(id="CHK_HASTA_KAYIT_YENIDOGAN")
+     public WebElement yenidoganCheckBox;
+@@ -145,6 +176,39 @@
+     @FindBy(xpath = "//textarea[@class='inpt wpx355']")
+     public WebElement aciklamaSearchBox;
+ 
++    @FindBy(xpath = "(//input[@class='dxeEditArea_MetropolisBlue dxeEditAreaSys'])[1]")
++    public WebElement ilKoduSearchBox;
++
++    @FindBy(className = "//td[@class='IL_ADI dxgv dx-ellipsis']")
++    public WebElement mardinIlSecButton;
++
++    @FindBy(className = "dxp-lead dxp-summary")
++    public WebElement ogeSayisi;
++
++    @FindBy(xpath = "//a[@class='PopupCloseButton PopupButton']")
++    public WebElement KapatButton;
++
++    @FindBy (xpath = "//input[@class='inpt tacnt wpx50']")
++    public WebElement poliklinkSearchBox;
++
++    @FindBy(xpath = "(//td[@class='POLIKLINIK_ADI dxgv dx-ellipsis'])[6]")
++    public WebElement acilPoliklinkButton;
++
++    @FindBy ( id = "GELIS_SEKLI_KODU")
++    public WebElement gelisNedeni;
++
++    @FindBy(className = " hem_button hem_kaydet cmd_MuayeneKayit")
++    public WebElement kaydetButtoon;
++
++    @FindBy(xpath = "(//p)")
++    public WebElement massageVerfy;
++
++    @FindBy(xpath = "(//a[@class='LookupSelectButton text_btn text_btn_ok backWhite'])[8]")
++    public WebElement hastaTurur3;
++
++    @FindBy(xpath = "//span[@class='info item']")
++    public WebElement popupKapatButton;
++
+  //--------------------------------------------------------- Baris
+ 
+     @FindBy(xpath = "(//select[@class='inpt '])[1]")
+@@ -153,13 +217,13 @@
+     @FindBy(xpath = "(//select[@class='inpt '])[2]")
+     public  WebElement basvuruSekliDropdown;
+ 
+-    @FindBy(xpath = "(//input[@class='inpt '])[13]")
++    @FindBy(xpath = "(//input[@id='TXT_HASTA_KAYIT_BABA_ADI'])")
+     public  WebElement babaAdiSearchBox;
+ 
+-    @FindBy(xpath = "(//input[@class='inpt '])[14]")
++    @FindBy(xpath = "(//input[@class='inpt '])[13]")
+     public  WebElement anaAdiSearchBox;
+ 
+-    @FindBy(xpath = "(//input[@class='inpt '])[15]")
++    @FindBy(xpath = "(//input[@class='inpt '])[14]")
+     public  WebElement dogumYeriSearchBox;
+ 
+     @FindBy(id = "TXT_HASTA_KAYIT_ANNE_TC_KIMLIK_NO")
+Index: src/test/resources/features/HastaKayit_E.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@probel_hastaKayit\r\nFeature: probel_hastaKayit\r\n\r\n  Background:\r\n    Given The user logs in\r\n    And The user goes Hasta İşlemleri, Ayaktan Hasta İşlemleri and then click Poliklinik Muayene Kayıt\r\n    And Click the Hasta button\r\n    And Enter Kurum, Kurum detay\r\n\r\n  @e_test1\r\n  Scenario: TC001 - \"Tc\" Kimlik no\" error message verification\r\n    Then click the Kaydet-F10- button\r\n    And verify -Hasta Karti Düzenleme - T.C kimlik numarasi bos olamaz ...PROBEL!- message\r\n\r\n  @e_test2\r\n  Scenario: TC002 - \"Passport no\" and \"Passport id\" verification on the registration page\r\n    Then select nationality uyruk -ABD (Amerika Birleşik D.)-\r\n    And Verify that -Pasaport ıd- and -pasaport no- are in the page\r\n\r\n  @e_test3\r\n  Scenario: TC003 - Entering a future date of the newborn baby's baby birth week\r\n    Then make patient type -SAĞLIK TURİZMİ-\r\n    And Enter -TC no- -Adi -soyadi- -doğum tarihi- -cinsiyet- -ana adi- -baba adi- -doğum yeri- -anne tc no-\r\n    And -Yeni doğan- button click\r\n    And verify the text -Bebeğin doğum haftası günü-\r\n    And -Bebeğin doğum- -haftasi--günü- enter a week and future days\r\n    And enter mobile number -cep telefonu- and click -sms gönderilebilir-\r\n    And Click the -kaydet f10- boxxx
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/resources/features/HastaKayit_E.feature b/src/test/resources/features/HastaKayit_E.feature
+--- a/src/test/resources/features/HastaKayit_E.feature	(revision 8654b663b7d880c7a2c1e3c8afdcdb07fba7f4e8)
++++ b/src/test/resources/features/HastaKayit_E.feature	(date 1692108841145)
+@@ -7,17 +7,17 @@
+     And Click the Hasta button
+     And Enter Kurum, Kurum detay
+ 
+-  @e_test1
++  @test1
+   Scenario: TC001 - "Tc" Kimlik no" error message verification
+     Then click the Kaydet-F10- button
+     And verify -Hasta Karti Düzenleme - T.C kimlik numarasi bos olamaz ...PROBEL!- message
+ 
+-  @e_test2
++  @test2
+   Scenario: TC002 - "Passport no" and "Passport id" verification on the registration page
+     Then select nationality uyruk -ABD (Amerika Birleşik D.)-
+     And Verify that -Pasaport ıd- and -pasaport no- are in the page
+ 
+-  @e_test3
++  @test3
+   Scenario: TC003 - Entering a future date of the newborn baby's baby birth week
+     Then make patient type -SAĞLIK TURİZMİ-
+     And Enter -TC no- -Adi -soyadi- -doğum tarihi- -cinsiyet- -ana adi- -baba adi- -doğum yeri- -anne tc no-
+@@ -25,4 +25,53 @@
+     And verify the text -Bebeğin doğum haftası günü-
+     And -Bebeğin doğum- -haftasi--günü- enter a week and future days
+     And enter mobile number -cep telefonu- and click -sms gönderilebilir-
+-    And Click the -kaydet f10- boxxx
+\ No newline at end of file
++    And Click the -kaydet f10- boxxx
++    And Select a valid Poliklinik on Muayene Kayıt Page
++    And Select a valid Geliş Şekli on Muayene Kayıt Page
++    And Click Kaydet button on Muayene Kayıt Page
++    Then Bilgiler Kaydedildi should be seen on Popup Alert on Muayene Kayıt Page
++
++
++    @test4
++    Scenario: TC0116 - verification of "Tahsis no" and "karne seri no" on the registration page
++    Then select nationality -uyruk- -Almanya-
++    And Verify that -Tahsis no- and -karne seri no- are in the page
++
++    @test5
++    Scenario: TC0059 - the patient's mother's date of birth is a later date
++    Then -Anne doğum tarihi- enter a future date
++    And select -Hasta türü- -Kimliksiz hasta-
++    And Enter -Kişi bilgileri- -TC-,-Adı-,-Soyadı-,-cinsiyet-,-Baba Adı-,-Anne adi-,-Doğum yeri-,-Anne tc-
++    And Hata message verifyy
++
++
++    @test6
++    Scenario: TC0058 - Date of birth accepts a future date
++   Then click the -Yeni Doğan- button
++    And Enter -Kişi bilgileri- -TC-,-Adı-,-Soyadı-,-cinsiyet-,-Baba Adi-,-Anne adi-,-Dogum yeri-,-Anne tc-
++    And -Doğum T.- enter a future date
++    And -Kaydet- button click
++    And -Hata- message verify
++
++    @test7
++    Scenario: TC0043 - city_county_validation
++    Then Type -47- in the -İl- box
++    And Double click the -İlce- box and check the popup
++    And  Verify -oge sayisi"
++
++      @test8
++      Scenario: ts
++        Then select nationality uyruk -ANDORRA-
++        And enter patient type -T.C. SAĞLIK BAKANLIĞI SAĞLIK VE TIP ALANINDA İKİLİ İŞ BİRLİĞİ ANLAŞMALARI KAPSAMINDAKİ HASTALAR-
++        And Enter -pasaport no- and -passport id-
++        And -cinsiyet- enter
++        And -cep telefonu- enter
++        And Enter -adi- and -soyadi-
++        And Enter -dogum Tarihi-
++        And -işlem başarılı- massage verify
++        And -kapat- button click
++        And Poliklinik enter
++        And select -geliş nedeni-
++        And -kaydett- button click
++        When -Bilgiler kaydedildi- massage veryfy
++
+Index: src/test/java/runner/Runner.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package runner;\r\n\r\nimport io.cucumber.junit.Cucumber;\r\nimport io.cucumber.junit.CucumberOptions;\r\nimport org.junit.runner.RunWith;\r\n\r\n\r\n@RunWith(Cucumber.class)\r\n\r\n\r\n@CucumberOptions(\r\n        plugin = {\"pretty\",\r\n                \"json:target/json-report/cucumber.json\",\r\n                \"html:target/cucumber-reports.json\",\r\n                \"junit:target/cucumber-reports/Cucumber.xml\",\r\n                },\r\n\r\n        features = \"src/test/resources\",\r\n        glue = \"stepdefinitions\",\r\n        tags = \"@e_test3\",\r\n        dryRun = false\r\n\r\n)\r\npublic class Runner {\r\n\r\n\r\n\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/runner/Runner.java b/src/test/java/runner/Runner.java
+--- a/src/test/java/runner/Runner.java	(revision 8654b663b7d880c7a2c1e3c8afdcdb07fba7f4e8)
++++ b/src/test/java/runner/Runner.java	(date 1692108614218)
+@@ -17,7 +17,7 @@
+ 
+         features = "src/test/resources",
+         glue = "stepdefinitions",
+-        tags = "@e_test3",
++        tags = "@test8",
+         dryRun = false
+ 
+ )
+Index: src/test/java/stepdefinitions/HastaKayit_StepDefinitions_E.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package stepdefinitions;\r\n\r\nimport io.cucumber.java.en.Then;\r\nimport io.cucumber.java.en.When;\r\nimport org.junit.Assert;\r\nimport org.openqa.selenium.interactions.Actions;\r\nimport org.openqa.selenium.support.ui.Select;\r\nimport pages.BasePage;\r\nimport pages.Hasta_Kayit_Page_E;\r\nimport utilities.ConfigReader;\r\nimport utilities.Driver;\r\n\r\npublic class HastaKayit_StepDefinitions_E {\r\n\r\n\r\n\r\n    BasePage basePage = new BasePage();\r\n    Actions actions = new Actions(Driver.getDriver());\r\n    Hasta_Kayit_Page_E hasta_kayit_page = new Hasta_Kayit_Page_E();\r\n\r\n\r\n    @When(\"Click the Hasta button\")\r\n    public void click_the_hasta_button() {\r\n\r\n        basePage.hastaButton.click();\r\n    }\r\n    @When(\"Enter Kurum, Kurum detay\")\r\n    public void enter_kurum_kurum_detay() {\r\n\r\n        hasta_kayit_page.kurum.sendKeys(ConfigReader.getProperty(\"kurum\"));\r\n        hasta_kayit_page.kurumDetay.sendKeys(ConfigReader.getProperty(\"kurum_Detay\"));\r\n    }\r\n    @Then(\"click the Kaydet-F10- button\")\r\n    public void click_the_kaydet_f10_button() {\r\n\r\n        hasta_kayit_page.ceptelefonu.click();\r\n        hasta_kayit_page.ceptelefonu.sendKeys(\"05411111458\");\r\n        hasta_kayit_page.kaydetButton.click();\r\n    }\r\n    @Then(\"verify -Hasta Karti Düzenleme - T.C kimlik numarasi bos olamaz ...PROBEL!- message\")\r\n    public void verify_hasta_karti_düzenleme_t_c_kimlik_numarasi_bos_olamaz_probel_message() {\r\n\r\n        Assert.assertTrue(hasta_kayit_page.HataMassage.isDisplayed());\r\n    }\r\n\r\n\r\n    @Then(\"select nationality uyruk -ABD \\\\(Amerika Birleşik D.)-\")\r\n    public void select_nationality_uyruk_abd_amerika_birleşik_d() {\r\n\r\n        Select select = new Select(hasta_kayit_page.uyruguDropdown);\r\n        select.selectByVisibleText(\"ABD (AMERIKA BIRLEŞİK D.)\");\r\n    }\r\n    @Then(\"Verify that -Pasaport ıd- and -pasaport no- are in the page\")\r\n    public void verify_that_pasaport_ıd_and_pasaport_no_are_in_the_page() {\r\n\r\n        Assert.assertTrue(hasta_kayit_page.pasaportIdSearchBox.isDisplayed());\r\n        Assert.assertTrue(hasta_kayit_page.pasaportNoSearchBox1.isDisplayed());\r\n        Assert.assertTrue(hasta_kayit_page.pasaportNoSearchBox2.isDisplayed());\r\n    }\r\n\r\n\r\n\r\n    @Then(\"make patient type -SAĞLIK TURİZMİ-\")\r\n    public void make_patient_type_sağlık_turizmi() {\r\n\r\n    }\r\n    @Then(\"Enter -TC no- -Adi -soyadi- -doğum tarihi- -cinsiyet- -ana adi- -baba adi- -doğum yeri- -anne tc no-\")\r\n    public void enter_tc_no_adi_soyadi_doğum_tarihi_cinsiyet_ana_adi_baba_adi_doğum_yeri_anne_tc_no() {\r\n\r\n    }\r\n    @Then(\"-Yeni doğan- button click\")\r\n    public void yeni_doğan_button_click() {\r\n\r\n    }\r\n    @Then(\"verify the text -Bebeğin doğum haftası günü-\")\r\n    public void verify_the_text_bebeğin_doğum_haftası_günü() {\r\n\r\n    }\r\n    @Then(\"-Bebeğin doğum- -haftasi\\\\/günü- enter a week and future days\")\r\n    public void bebeğin_doğum_haftasi_günü_enter_a_week_and_future_days() {\r\n\r\n    }\r\n    @Then(\"enter mobile number -cep telefonu- and click -sms gönderilebilir-\")\r\n    public void enter_mobile_number_cep_telefonu_and_click_sms_gönderilebilir() {\r\n\r\n    }\r\n    @Then(\"Click the -kaydet f10- boxxx\")\r\n    public void click_the_kaydet_f10_boxxx() {\r\n\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/stepdefinitions/HastaKayit_StepDefinitions_E.java b/src/test/java/stepdefinitions/HastaKayit_StepDefinitions_E.java
+--- a/src/test/java/stepdefinitions/HastaKayit_StepDefinitions_E.java	(revision 8654b663b7d880c7a2c1e3c8afdcdb07fba7f4e8)
++++ b/src/test/java/stepdefinitions/HastaKayit_StepDefinitions_E.java	(date 1692113336287)
+@@ -1,14 +1,19 @@
+ package stepdefinitions;
+ 
++import com.fasterxml.jackson.annotation.JsonTypeInfo;
++import com.github.javafaker.Faker;
++import io.cucumber.java.en.And;
+ import io.cucumber.java.en.Then;
+ import io.cucumber.java.en.When;
+ import org.junit.Assert;
++import org.openqa.selenium.Keys;
+ import org.openqa.selenium.interactions.Actions;
+ import org.openqa.selenium.support.ui.Select;
+ import pages.BasePage;
+ import pages.Hasta_Kayit_Page_E;
+ import utilities.ConfigReader;
+ import utilities.Driver;
++import utilities.ReusableMethods;
+ 
+ public class HastaKayit_StepDefinitions_E {
+ 
+@@ -17,6 +22,7 @@
+     BasePage basePage = new BasePage();
+     Actions actions = new Actions(Driver.getDriver());
+     Hasta_Kayit_Page_E hasta_kayit_page = new Hasta_Kayit_Page_E();
++    Faker faker = new Faker();
+ 
+ 
+     @When("Click the Hasta button")
+@@ -30,6 +36,8 @@
+         hasta_kayit_page.kurum.sendKeys(ConfigReader.getProperty("kurum"));
+         hasta_kayit_page.kurumDetay.sendKeys(ConfigReader.getProperty("kurum_Detay"));
+     }
++
++    //test1---------------
+     @Then("click the Kaydet-F10- button")
+     public void click_the_kaydet_f10_button() {
+ 
+@@ -43,7 +51,7 @@
+         Assert.assertTrue(hasta_kayit_page.HataMassage.isDisplayed());
+     }
+ 
+-
++    //test2--------------
+     @Then("select nationality uyruk -ABD \\(Amerika Birleşik D.)-")
+     public void select_nationality_uyruk_abd_amerika_birleşik_d() {
+ 
+@@ -59,34 +67,347 @@
+     }
+ 
+ 
+-
++    //test3--------------
+     @Then("make patient type -SAĞLIK TURİZMİ-")
+-    public void make_patient_type_sağlık_turizmi() {
++    public void make_patient_type_sağlık_turizmi() throws InterruptedException {
+ 
++        hasta_kayit_page.hastaTuruButton.click();
++        Thread.sleep(3000);
++        hasta_kayit_page.saglikTurizimiButton.click();
+     }
+     @Then("Enter -TC no- -Adi -soyadi- -doğum tarihi- -cinsiyet- -ana adi- -baba adi- -doğum yeri- -anne tc no-")
+-    public void enter_tc_no_adi_soyadi_doğum_tarihi_cinsiyet_ana_adi_baba_adi_doğum_yeri_anne_tc_no() {
++    public void enter_tc_no_adi_soyadi_doğum_tarihi_cinsiyet_ana_adi_baba_adi_doğum_yeri_anne_tc_no() throws InterruptedException {
++        hasta_kayit_page.TCsearchBox.sendKeys("11771511824");
++        Thread.sleep(1000);
++
++        hasta_kayit_page.adiSearchBox.sendKeys(faker.name().firstName());
++        hasta_kayit_page.soyadiSearchBox.sendKeys(faker.name().lastName());
++        Thread.sleep(3000);
++
++        hasta_kayit_page.dogumTarihiSearchBox.sendKeys("15/08/2023");
++        Thread.sleep(4000);
++
++
++        Select select2 = new Select(hasta_kayit_page.cinsiyetDropdown);
++        select2.selectByIndex(1);
++        Thread.sleep(1000);
++
++        hasta_kayit_page.anaAdiSearchBox.sendKeys(faker.name().firstName());
++        hasta_kayit_page.babaAdiSearchBox.sendKeys(faker.name().firstName());
++        Thread.sleep(1000);
++
++        hasta_kayit_page.dogumYeriSearchBox.sendKeys(faker.address().city());
++        hasta_kayit_page.anneTCNoSearchBox.sendKeys("23306127172");
++        Thread.sleep(1000);
+ 
+     }
+     @Then("-Yeni doğan- button click")
+-    public void yeni_doğan_button_click() {
++    public void yeni_doğan_button_click() throws InterruptedException {
++
++        Thread.sleep(1000);
+ 
++        Assert.assertTrue(hasta_kayit_page.yenidoganCheckBox.isDisplayed());
++
++        Thread.sleep(1000);
++        if (!hasta_kayit_page.yenidoganCheckBox.isSelected()){
++            hasta_kayit_page.yenidoganCheckBox.click();
++        }
+     }
+     @Then("verify the text -Bebeğin doğum haftası günü-")
+-    public void verify_the_text_bebeğin_doğum_haftası_günü() {
++    public void verify_the_text_bebeğin_doğum_haftası_günü() throws InterruptedException {
++        Thread.sleep(1000);
++
++        try {
++            Assert.assertTrue(hasta_kayit_page.bebeginDogumGunuSearchBox.isDisplayed());
++            Assert.assertTrue(hasta_kayit_page.bebeginDogumHaftasiSearchBox.isDisplayed());
++        }catch (Exception e){
+ 
++        }
+     }
+-    @Then("-Bebeğin doğum- -haftasi\\/günü- enter a week and future days")
+-    public void bebeğin_doğum_haftasi_günü_enter_a_week_and_future_days() {
++    @Then("-Bebeğin doğum- -haftasi--günü- enter a week and future days")
++    public void bebeğin_doğum_haftasi_günü_enter_a_week_and_future_days() throws InterruptedException {
+ 
++        Thread.sleep(3000);
++        hasta_kayit_page.bebeginDogumHaftasiSearchBox.sendKeys(faker.number().digit());
++        hasta_kayit_page.bebeginDogumGunuSearchBox.sendKeys(faker.number().digit());
+     }
+     @Then("enter mobile number -cep telefonu- and click -sms gönderilebilir-")
+-    public void enter_mobile_number_cep_telefonu_and_click_sms_gönderilebilir() {
++    public void enter_mobile_number_cep_telefonu_and_click_sms_gönderilebilir() throws InterruptedException {
+ 
++        Thread.sleep(1000);
++        hasta_kayit_page.ceptelefonu.click();
++        Thread.sleep(1000);
++        hasta_kayit_page.ceptelefonu.sendKeys("5424218774");
++        hasta_kayit_page.SMS.click();
+     }
+     @Then("Click the -kaydet f10- boxxx")
+-    public void click_the_kaydet_f10_boxxx() {
++    public void click_the_kaydet_f10_boxxx() throws InterruptedException {
++
++        Thread.sleep(7000);
++        hasta_kayit_page.kaydetButton.click();
++        Assert.assertTrue(hasta_kayit_page.islemBasariliMassage.isDisplayed());
++    }
++
++    @And("Select a valid Poliklinik on Muayene Kayıt Page")
++    public void selectAValidPoliklinikOnMuayeneKayıtPage() {
++        ReusableMethods.doubleClick(hasta_kayit_page.poliklinkSearchBox);
++        ReusableMethods.doubleClick(hasta_kayit_page.acilPoliklinkButton);
++
++    }
++    @And("Select a valid Geliş Şekli on Muayene Kayıt Page")
++    public void selectAValidGelişŞekliOnMuayeneKayıtPage() {
++        Select select = new Select(hasta_kayit_page.gelisNedeni);
++        select.selectByVisibleText("Ayaktan");
++
++    }
++    @And("Click Kaydet button on Muayene Kayıt Page")
++    public void clickKaydetButtonOnMuayeneKayıtPage() {
++        hasta_kayit_page.kaydetButtoon.click();
++
++    }
++
++    @Then("Bilgiler Kaydedildi should be seen on Popup Alert on Muayene Kayıt Page")
++    public void bilgilerKaydedildiShouldBeSeenOnPopupAlertOnMuayeneKayıtPage() {
++
++        Assert.assertTrue(hasta_kayit_page.massageVerfy.isDisplayed());
++    }
++
++
++    //test4----------
++    @Then("select nationality -uyruk- -Almanya-")
++    public void select_nationality_uyruk_almanya() {
++
++        Select select3 = new Select(hasta_kayit_page.uyruguDropdown);
++        select3.selectByValue("3");
++    }
++    @Then("Verify that -Tahsis no- and -karne seri no- are in the page")
++    public void verify_that_tahsis_no_and_karne_seri_no_are_in_the_page() throws InterruptedException {
++        Thread.sleep(2000);
++
++        Assert.assertTrue(hasta_kayit_page.tahsisNoSearchBox.isDisplayed());
++        Assert.assertTrue(hasta_kayit_page.karneSeriNoSearchBox1.isDisplayed());
++        Assert.assertTrue(hasta_kayit_page.karneSeriNoSearchBox2.isDisplayed());
++    }
++
++    //test5
++    @Then("-Anne doğum tarihi- enter a future date")
++    public void anne_doğum_tarihi_enter_a_future_date() throws InterruptedException {
++        Thread.sleep(2000);
++        hasta_kayit_page.anneDogumTarihiSearchBox.click();
++        hasta_kayit_page.anneDogumTarihiSearchBox.sendKeys("14/10/2023");
++        Thread.sleep(2000);
++
++    }
++    @Then("select -Hasta türü- -Kimliksiz hasta-")
++    public void select_hasta_türü_kimliksiz_hasta() throws InterruptedException {
++        hasta_kayit_page.hastaTuruButton.click();
++        Thread.sleep(3000);
++        hasta_kayit_page.kimliksizHastaButton.click();
++
++    }
++    @Then("Enter -Kişi bilgileri- -TC-,-Adı-,-Soyadı-,-cinsiyet-,-Baba Adı-,-Anne adi-,-Doğum yeri-,-Anne tc-")
++    public void enter_kişi_bilgileri_tc_adı_soyadı_cinsiyet_baba_adı_anne_adi_doğum_yeri_anne_tc() throws InterruptedException {
++        Thread.sleep(2000);
++        hasta_kayit_page.adiSearchBox.sendKeys(faker.name().firstName());
++        hasta_kayit_page.soyadiSearchBox.sendKeys(faker.name().lastName());
++
++        Select select = new Select(hasta_kayit_page.cinsiyetDropdown);
++        select.selectByIndex(2);
++        Thread.sleep(2000);
++
++        hasta_kayit_page.dogumTarihiSearchBox.click();
++        Thread.sleep(2000);
++        hasta_kayit_page.dogumTarihiSearchBox.sendKeys("15/06/1998");
++        Thread.sleep(2000);
++
++        hasta_kayit_page.ceptelefonu.click();
++        hasta_kayit_page.ceptelefonu.sendKeys("5427418567");
++        Thread.sleep(2000);
++        hasta_kayit_page.kaydetButton.click();
++
++    }
++
++    @Then("Hata message verifyy")
++    public void hata_message_verifyy() {
++        System.out.println(hasta_kayit_page.HataMassage.getText());
++
++       String Expected = hasta_kayit_page.HataMassage.getText();
++       String actualErorMassage= "İşlem Başarısız";
++
++       Assert.assertEquals(Expected,actualErorMassage);
++    }
++
++    //test6
++    @Then("click the -Yeni Doğan- button")
++    public void click_the_yeni_doğan_button() {
++        hasta_kayit_page.yenidoganCheckBox.click();
++
++        Assert.assertTrue(hasta_kayit_page.bebeginDogumGunuSearchBox.isDisplayed());
++        Assert.assertTrue(hasta_kayit_page.bebeginDogumHaftasiSearchBox.isDisplayed());
++
++        hasta_kayit_page.bebeginDogumGunuSearchBox.sendKeys(faker.number().digit());
++        hasta_kayit_page.bebeginDogumHaftasiSearchBox.sendKeys(faker.number().digit());
++
++    }
++    @Then("Enter -Kişi bilgileri- -TC-,-Adı-,-Soyadı-,-cinsiyet-,-Baba Adi-,-Anne adi-,-Dogum yeri-,-Anne tc-")
++    public void enter_kişi_bilgileri_tc_adı_soyadı_cinsiyet_baba_adi_anne_adi_dogum_yeri_anne_tc() throws InterruptedException {
++        Thread.sleep(2000);
++        hasta_kayit_page.hastaTuruButton.click();
++        hasta_kayit_page.kimliksizHastaButton.click();
++        Thread.sleep(2000);
++        hasta_kayit_page.adiSearchBox.sendKeys(faker.name().firstName());
++        hasta_kayit_page.soyadiSearchBox.sendKeys(faker.name().lastName());
++        Thread.sleep(2000);
++
++        Select cinsiyet = new Select(hasta_kayit_page.cinsiyetDropdown);
++        cinsiyet.selectByIndex(1);
++
++        hasta_kayit_page.ceptelefonu.click();
++        hasta_kayit_page.ceptelefonu.sendKeys("5421478956");
++
++        Thread.sleep(3000);
++    }
++    @Then("-Doğum T.- enter a future date")
++    public void doğum_t_enter_a_future_date() {
++        hasta_kayit_page.dogumTarihiSearchBox.sendKeys("25/09/2024");
++
++    }
++    @Then("-Kaydet- button click")
++    public void kaydet_button_click() {
++        hasta_kayit_page.kaydetButton.click();
++
++    }
++    @Then("-Hata- message verify")
++    public void hata_message_verify() {
++
++        System.out.println(hasta_kayit_page.HataMassage.getText());
++
++        String Expected = hasta_kayit_page.HataMassage.getText();
++        String actualErorMassage= "İşlem Başarısız";
++
++        Assert.assertEquals(Expected,actualErorMassage);
+ 
+     }
++
++    //test7
++    @Then("Type {int}- in the -İl- box")
++    public void type_in_the_il_box(Integer int1) throws InterruptedException {
++        ReusableMethods.doubleClick(hasta_kayit_page.ilSearchBox);
++        Thread.sleep(2000);
++
++        hasta_kayit_page.ilKoduSearchBox.click();
++        Thread.sleep(1000);
++        hasta_kayit_page.ilKoduSearchBox.sendKeys("47"+ Keys.ENTER);
++        Thread.sleep(5000);
++
++
++
++    }
++    @Then("Double click the -İlce- box and check the popup")
++    public void double_click_the_ilce_box_and_check_the_popup() {
++
++        ReusableMethods.doubleClick(hasta_kayit_page.ilceSearchBox);
++    }
++
++
++    @And("Verify -oge sayisi\"")
++    public void verifyOgeSayisi() throws Throwable {
++
++        System.out.println(hasta_kayit_page.ogeSayisi.getText());
++
++      String expected=  hasta_kayit_page.ogeSayisi.getText();
++      String actual = "Sayfa 1 / 1 (11 öğe)";
++
++        Assert.assertEquals(expected,actual);
++
++    }
++
++
++
++    //test8
++    @Then("select nationality uyruk -ANDORRA-")
++    public void select_nationality_uyruk_andorra() {
++        Select select = new Select(hasta_kayit_page.uyruguDropdown);
++        select.selectByVisibleText("ANDORRA");
++
++    }
++    @Then("enter patient type -T.C. SAĞLIK BAKANLIĞI SAĞLIK VE TIP ALANINDA İKİLİ İŞ BİRLİĞİ ANLAŞMALARI KAPSAMINDAKİ HASTALAR-")
++    public void enter_patient_type_t_c_sağlık_bakanlığı_sağlık_ve_tıp_alanında_ikili_iş_birliği_anlaşmaları_kapsamındaki_hastalar() {
++        hasta_kayit_page.hastaTuruButton.click();
++        hasta_kayit_page.hastaTurur3.click();
++
++    }
++    @Then("Enter -pasaport no- and -passport id-")
++    public void enter_pasaport_no_and_passport_id() throws InterruptedException {
++        Thread.sleep(2000);
++        hasta_kayit_page.pasaportIdSearchBox.sendKeys("123456");
++        hasta_kayit_page.pasaportNoSearchBox1.sendKeys("1234");
++        Thread.sleep(2000);
++        hasta_kayit_page.pasaportNoSearchBox2.sendKeys("156874");
++
++    }
++    @Then("-cinsiyet- enter")
++    public void cinsiyet_enter() throws InterruptedException {
++        Thread.sleep(1000);
++        Select select1 = new Select(hasta_kayit_page.cinsiyetDropdown);
++        select1.selectByIndex(2);
++
++    }
++    @Then("-cep telefonu- enter")
++    public void cep_telefonu_enter() throws InterruptedException {
++        hasta_kayit_page.ceptelefonu.click();
++        Thread.sleep(2000);
++        hasta_kayit_page.ceptelefonu.sendKeys("5421586547");
++    }
++    @Then("Enter -adi- and -soyadi-")
++    public void enter_adi_and_soyadi() {
++        hasta_kayit_page.adiSearchBox.sendKeys(faker.name().firstName());
++        hasta_kayit_page.soyadiSearchBox.sendKeys(faker.name().lastName());
++
++    }
++    @Then("Enter -dogum Tarihi-")
++    public void enter_dogum_tarihi() throws InterruptedException {
++        Thread.sleep(5000);
++        hasta_kayit_page.dogumTarihiSearchBox.sendKeys("14/02/2000");
++        Thread.sleep(3000);
++
++
++
++    }
++    @Then("-işlem başarılı- massage verify")
++    public void işlem_başarılı_massage_verify() {
++        hasta_kayit_page.kaydetButton.click();
++        Assert.assertTrue(hasta_kayit_page.massageVerfy.isDisplayed());
++        hasta_kayit_page.popupKapatButton.click();
++    }
++    @Then("-kapat- button click")
++    public void kapat_button_click() {
++        hasta_kayit_page.KapatButton.click();
++
++
++    }
++    @Then("Poliklinik enter")
++    public void poliklinik_enter() {
++        hasta_kayit_page.poliklinkSearchBox.sendKeys("2"+Keys.ENTER);
++
++    }
++    @Then("select -geliş nedeni-")
++    public void select_geliş_nedeni() {
++        Select select2 = new Select(hasta_kayit_page.gelisNedeni);
++        select2.selectByIndex(5);
++
++    }
++    @And("-kaydett- button click")
++    public void kaydettButtonClick() {
++        hasta_kayit_page.kaydetButtoon.click();
++
++    }
++    @When("-Bilgiler kaydedildi- massage veryfy")
++    public void bilgiler_kaydedildi_massage_veryfy() {
++        Assert.assertTrue(hasta_kayit_page.massageVerfy.isDisplayed());
++
++    }
++
++
+ 
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"8917be49-40a0-400b-a3e8-b8b0def16747\" name=\"Changes\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2Tqo5ZQuLTHs01oM1LkPPIsiKr4\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/user/IdeaProjects/Probel_Abeyis_project/src/test/resources\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\user\\IdeaProjects\\Probel_Abeyis_project\\src\\test\\resources\" />\r\n      <recent name=\"C:\\Users\\user\\IdeaProjects\\Probel_Abeyis_project\\src\\test\" />\r\n      <recent name=\"C:\\Users\\user\\IdeaProjects\\Probel_Abeyis_project\\src\\test\\java\" />\r\n      <recent name=\"C:\\Users\\user\\IdeaProjects\\Probel_Abeyis_project\\src\\test\\java\\pages\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"page\" />\r\n      <recent name=\"\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"runner\" />\r\n      <recent name=\"pages\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Runner\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Probel_Abeyis_project\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"runner.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"runner\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"runner.Runner\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"JUnit.Runner\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"8917be49-40a0-400b-a3e8-b8b0def16747\" name=\"Changes\" comment=\"\" />\r\n      <created>1691779790574</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1691779790574</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 8654b663b7d880c7a2c1e3c8afdcdb07fba7f4e8)
++++ b/.idea/workspace.xml	(date 1692133108374)
+@@ -4,13 +4,24 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="8917be49-40a0-400b-a3e8-b8b0def16747" name="Changes" comment="" />
++    <list default="true" id="8917be49-40a0-400b-a3e8-b8b0def16747" name="Changes" comment="eyup">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Hasta_Kayit_Page_E.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Hasta_Kayit_Page_E.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/Runner.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/HastaKayit_StepDefinitions_E.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/HastaKayit_StepDefinitions_E.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/resources/features/HastaKayit_E.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/HastaKayit_E.feature" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="master" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+@@ -22,14 +33,14 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "last_opened_file_path": "C:/Users/user/IdeaProjects/Probel_Abeyis_project/src/test/resources"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/Probel_Abeyis_project/src/test/resources&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Users\user\IdeaProjects\Probel_Abeyis_project\src\test\resources" />
+@@ -46,7 +57,86 @@
+       <recent name="pages" />
+     </key>
+   </component>
+-  <component name="RunManager">
++  <component name="RunManager" selected="JUnit.Runner">
++    <configuration name="Feature: HastaKayit_E" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
++      <option name="CUCUMBER_CORE_VERSION" value="5" />
++      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/HastaKayit_E.feature" />
++      <option name="GLUE" value="stepdefinitions" />
++      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
++      <module name="Probel_Abeyis_project" />
++      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
++      <option name="SUGGESTED_NAME" value="Feature: HastaKayit_E" />
++      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="io.cucumber.core.cli.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="Scenario: TC0058 - Date of birth accepts a future date" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
++      <option name="CUCUMBER_CORE_VERSION" value="5" />
++      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/HastaKayit_E.feature" />
++      <option name="GLUE" value="stepdefinitions" />
++      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
++      <module name="Probel_Abeyis_project" />
++      <option name="NAME_FILTER" value="^TC0058 \- Date of birth accepts a future date$" />
++      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC0058 \- Date of birth accepts a future date$&quot;" />
++      <option name="SUGGESTED_NAME" value="Scenario: TC0058 - Date of birth accepts a future date" />
++      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="io.cucumber.core.cli.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="Scenario: TC0059 - the patient's mother's date of birth is a later date" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
++      <option name="CUCUMBER_CORE_VERSION" value="5" />
++      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/HastaKayit_E.feature" />
++      <option name="GLUE" value="stepdefinitions" />
++      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
++      <module name="Probel_Abeyis_project" />
++      <option name="NAME_FILTER" value="^TC0059 \- the patient\'s mother\'s date of birth is a later date$" />
++      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC0059 \- the patient\'s mother\'s date of birth is a later date$&quot;" />
++      <option name="SUGGESTED_NAME" value="Scenario: TC0059 - the patient's mother's date of birth is a later date" />
++      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="io.cucumber.core.cli.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="Scenario: kahveVebrowniİcin" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
++      <option name="CUCUMBER_CORE_VERSION" value="5" />
++      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/HastaKayit_B.feature" />
++      <option name="GLUE" value="stepdefinitions" />
++      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
++      <module name="Probel_Abeyis_project" />
++      <option name="NAME_FILTER" value="^kahveVebrowniİcin$" />
++      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^kahveVebrowniİcin$&quot;" />
++      <option name="SUGGESTED_NAME" value="Scenario: kahveVebrowniİcin" />
++      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="io.cucumber.core.cli.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
+     <configuration name="Runner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="Probel_Abeyis_project" />
+       <extension name="coverage">
+@@ -65,6 +155,10 @@
+     <recent_temporary>
+       <list>
+         <item itemvalue="JUnit.Runner" />
++        <item itemvalue="Cucumber Java.Scenario: kahveVebrowniİcin" />
++        <item itemvalue="Cucumber Java.Feature: HastaKayit_E" />
++        <item itemvalue="Cucumber Java.Scenario: TC0058 - Date of birth accepts a future date" />
++        <item itemvalue="Cucumber Java.Scenario: TC0059 - the patient's mother's date of birth is a later date" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -77,6 +171,14 @@
+       <option name="presentableId" value="Default" />
+       <updated>1691779790574</updated>
+     </task>
++    <task id="LOCAL-00001" summary="eyup">
++      <created>1691781106427</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1691781106427</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -90,4 +192,8 @@
+       </map>
+     </option>
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="eyup" />
++    <option name="LAST_COMMIT_MESSAGE" value="eyup" />
++  </component>
+ </project>
+\ No newline at end of file

@@ -1,0 +1,19 @@
+Index: src/test/java/runner/Runner.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package runner;\r\n\r\nimport io.cucumber.junit.Cucumber;\r\nimport io.cucumber.junit.CucumberOptions;\r\nimport org.junit.runner.RunWith;\r\n\r\n\r\n@RunWith(Cucumber.class)\r\n\r\n\r\n@CucumberOptions(\r\n        plugin = {\"pretty\",\r\n                \"json:target/json-report/cucumber.json\",\r\n                \"html:target/cucumber-reports.json\",\r\n                \"junit:target/cucumber-reports/Cucumber.xml\",\r\n                },\r\n\r\n        features = \"src/test/resources\",\r\n        glue = \"stepdefinitions\",\r\n        tags = \"@test8\",\r\n        dryRun = false\r\n\r\n)\r\npublic class Runner {\r\n\r\n\r\n//uıhu\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/runner/Runner.java b/src/test/java/runner/Runner.java
+--- a/src/test/java/runner/Runner.java	(revision c1b8ef3430359f189f3b521892430747f248a0a7)
++++ b/src/test/java/runner/Runner.java	(date 1692137930519)
+@@ -17,7 +17,7 @@
+ 
+         features = "src/test/resources",
+         glue = "stepdefinitions",
+-        tags = "@test8",
++        tags = "@test3",
+         dryRun = false
+ 
+ )
