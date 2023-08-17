@@ -167,19 +167,10 @@ public class Hasta_Kayit_Page_İ {
     @FindBy(xpath = "//*[@id=\"basariliIcerik\"]/div/div[1]/p")
     public WebElement popupBilgilerKaydedildiMesaji;
 
-    @FindBy(xpath = "//*[@id=\"basariliIcerik\"]/div/div[3]/span")
+    @FindBy(xpath = "/html/body/div[1]/div/div/div[3]/span")
     public WebElement popupBilgilerKaydedildiTAMAMbutton;
 
-    @FindBy(xpath = "//*[@id=\"hataIcerik\"]/div/div[1]/p")
-    public WebElement Okumaişlemineyetkinizbulunmuyor;
 
-
-    @FindBy(xpath = "//*[@id=\"hataIcerik\"]/div/div[3]/span")
-    public WebElement hamePageDikkatKAPATMbutton;
-
-
-
-//....
 
     //----------------------------------------------------- Fatih
 

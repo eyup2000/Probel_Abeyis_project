@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -16,6 +17,7 @@ public class HastaKayit_StepDefinitions_İ {
     BasePage basePage = new BasePage();
     Actions actions = new Actions(Driver.getDriver());
     Hasta_Kayit_Page_İ hasta_kayit_page_i̇ = new Hasta_Kayit_Page_İ();
+    Faker faker = new Faker();
 
 
 
@@ -80,13 +82,18 @@ public class HastaKayit_StepDefinitions_İ {
     }
     @Given("user enters the surname")
     public void user_enters_the_surname() throws InterruptedException {
-        hasta_kayit_page_i̇.soyadiSearchBox.sendKeys("yilmaz");
+     //   hasta_kayit_page_i̇.soyadiSearchBox.sendKeys("yilmaz");
+        hasta_kayit_page_i̇.soyadiSearchBox.click();
+        String surname = faker.name().lastName();
+        hasta_kayit_page_i̇.soyadiSearchBox.sendKeys(surname);
         Thread.sleep(1000);
 
     }
     @Given("enter the user name")
     public void enter_the_user_name() throws InterruptedException {
-        hasta_kayit_page_i̇.adiSearchBox.sendKeys("semsettin");
+    //    hasta_kayit_page_i̇.adiSearchBox.sendKeys("semsettin");
+        String name = faker.name().name();
+        hasta_kayit_page_i̇.adiSearchBox.sendKeys(name);
         Thread.sleep(1000);
 
     }
@@ -305,13 +312,7 @@ public class HastaKayit_StepDefinitions_İ {
         Thread.sleep(1000);
         hasta_kayit_page_i̇.anaSayfaKaydetButton.click();
         Thread.sleep(2000);
-try {
-    Thread.sleep(2000);
-    hasta_kayit_page_i̇.hamePageDikkatKAPATMbutton.click();
-    Thread.sleep(1000);
-}catch (Exception e){
-    System.out.println("KLN/KLN - Okuma işlemine yetkiniz bulunmuyor çikmadi");
-}
+
     }
 
     @Given("user verifies the message {string}")
@@ -329,8 +330,22 @@ Assert.assertTrue("Bilgiler kaydedildi." , true);
         hasta_kayit_page_i̇.popupBilgilerKaydedildiTAMAMbutton.click();
 
     }
+    @Given("user enters the baba adi wrong format")
+    public void user_enters_the_baba_adi_wrong_format() {
+        hasta_kayit_page_i̇.babaAdiSearchBox.sendKeys("885/***/++??");
+
+    }
+    @Given("enter the user anne adi wrong format")
+    public void enter_the_user_anne_adi_wrong_format() {
+        hasta_kayit_page_i̇.anaAdiSearchBox.sendKeys("????**/*/2562-+");
+
+    }
+    @Given("enter the user dogum yeri wrong format")
+    public void enter_the_user_dogum_yeri_wrong_format() {
+        hasta_kayit_page_i̇.dogumYeriSearchBox.sendKeys("1234567*/*-+???**");
+
+    }
 
 
 
 }
-//...
